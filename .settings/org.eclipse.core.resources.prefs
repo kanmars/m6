@@ -1,0 +1,19 @@
+#Sun Jun 16 21:55:39 CST 2013
+eclipse.preferences.version=1
+encoding//WebContent/ftl/common/frame.ftl=UTF-8
+encoding//WebContent/ftl/js/reportform.js=UTF-8
+encoding//WebContent/ftl/main.ftl=utf-8
+encoding//WebContent/ftl/view/manager/projectAdd.ftl=utf-8
+encoding//WebContent/ftl/view/page/reportform.ftl=utf-8
+encoding//src/cn/kanmars/action/MainAction.java=utf-8
+encoding//src/cn/kanmars/action/exchange/ExchangeAction.java=utf-8
+encoding//src/cn/kanmars/action/user/LoginAction.java=utf-8
+encoding//src/cn/kanmars/business/exchange/Defray.java=utf-8
+encoding//src/cn/kanmars/business/exchange/ExchangeBusiness.java=utf-8
+encoding//src/cn/kanmars/business/exchange/Laborage.java=UTF-8
+encoding//src/cn/kanmars/business/exchange/Transfer.java=utf-8
+encoding//src/cn/kanmars/business/user/LogBusiness.java=GBK
+encoding//src/cn/kanmars/jfreechart/JFreeChartAction.java=utf-8
+encoding//src/cn/kanmars/jfreechart/datebase/JFreeChartDataSet.java=utf-8
+encoding//src/cn/kanmars/util/StrUtil.java=utf-8
+encoding/<project>=utf-8
