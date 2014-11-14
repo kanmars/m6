@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- struts2配置文件 -->
+	<include file="struts-default.xml" />
+	<include file="struts-plugin.xml" />
+	<!-- basepackage -->
+	<package name="basePackage" extends="struts-default">
+		<!-- 基础包 -->
+		<interceptors>
+			<interceptor name="loginInterceptor" class="loginInterceptor"></interceptor>
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<global-results>
+			<result name="fail" type="freemarker">/ftl/error.ftl</result>
+			<result name="login" type="redirect">/index.html</result>
+		</global-results>
+	</package>
+	<package name="baseJFreeChartPackage" extends="jfreechart-default">
+		<!-- jfreechart基础包 -->
+		<interceptors>
+			<interceptor name="loginInterceptor" class="loginInterceptor"></interceptor>
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<global-results>
+			<result name="fail" type="freemarker">/ftl/error.ftl</result>
+			<result name="login" type="redirect">/index.html</result>
+		</global-results>
+	</package>
+	
+	<include file="cn/resource/struts/txn/user.xml"/>
+	<include file="cn/resource/struts/txn/exchange.xml"/>
+	<include file="cn/resource/struts/txn/jfreeChartAction.xml"/>
+	<include file="cn/resource/struts/txn/page.xml"/>
+	<include file="cn/resource/struts/txn/manager.xml"/>
+</struts>

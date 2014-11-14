@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="exchange" extends="basePackage">
+		<action name="defray" class="exchangeAction" method="defray">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="redirectAction">main.action</result>
+		</action>
+		<action name="transfer" class="exchangeAction" method="transfer">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="redirectAction">main.action</result>
+		</action>
+		<action name="laborage" class="exchangeAction" method="laborage">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="redirectAction">main.action</result>
+		</action>
+		<action name="exchangell" class="exchangeAction" method="list">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="freemarker">/ftl/view/exchange/exchangell.ftl</result>
+		</action>
+	</package>
+</struts>

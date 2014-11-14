@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="oOManager" extends="basePackage">
+		<action name="oOList" class="oOManagerAction" method="oOList">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="freemarker">/ftl/view/manager/oOList.ftl</result>
+		</action>
+		<action name="oOAdd" class="oOManagerAction" method="oOAdd">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="redirectAction">oOList</result>
+		</action>
+		<action name="oODel" class="oOManagerAction" method="oODel">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="redirectAction">oOList</result>
+		</action>
+		<action name="oOUpdGet" class="oOManagerAction" method="oOUpdGet">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="freemarker">/ftl/view/manager/oOUpdGet.ftl</result>
+		</action>
+		<action name="oOUpdSet" class="oOManagerAction" method="oOUpdSet">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="redirectAction">oOList</result>
+		</action>
+	</package>
+	<package name="projectManager" extends="basePackage">
+		<action name="projectABCList" class="projectManagerAction" method="projectABCList">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="freemarker">/ftl/view/manager/projectList.ftl</result>
+		</action>
+		<action name="projectAdd" class="projectManagerAction" method="projectAdd">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="redirectAction">projectABCList</result>
+		</action>
+		<action name="projectDel" class="projectManagerAction" method="projectDel">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="redirectAction">projectABCList</result>
+		</action>
+		<action name="projectUpdGet" class="projectManagerAction" method="projectUpdGet">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="freemarker">/ftl/view/manager/projectUpdGet.ftl</result>
+		</action>
+		<action name="projectUpdSet" class="projectManagerAction" method="projectUpdSet">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="redirectAction">projectABCList</result>
+		</action>
+	</package>
+</struts>

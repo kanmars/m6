@@ -1,0 +1,13 @@
+1,findByNamedParam
+code:
+public List getRolesByName(String roleName) {
+        return getHibernateTemplate().findByNamedParam("from Role role where role.name=:roleName", "roleName",roleName);
+    }
+
+2,findByNamedQueryAndNamedParam
+code:
+getHibernateTemplate().findByNamedQueryAndNamedParam("testeCQuery", "idCidade", cidade);
+xml code:
+<query name="testeCQuery"><![CDATA[
+             from br.com.ag2.casarural.vo.Cidade as cidade where cidade.idCidade = :idCidade
+        ]]></query> 

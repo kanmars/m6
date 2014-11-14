@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="user" extends="basePackage">
+		<action name="login" class="loginAction">
+			<result name="success" type="redirectAction">main.action</result>
+		</action>
+		<action name="logout" class="logoutAction">
+			<result name="success" type="redirect">/index.html</result>
+		</action>
+		<action name="main" class="mainAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="freemarker">/ftl/main.ftl</result>
+		</action>
+	</package>
+</struts>

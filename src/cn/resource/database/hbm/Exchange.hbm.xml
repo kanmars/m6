@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="cn.kanmars.dao">
+	<class
+		name="Exchange"
+		table="exchange"
+	>
+		<id
+			name="Id"
+			type="string"
+			column="ID"
+		>
+			<generator class="assigned"/>
+		</id>
+
+		<property
+			name="Name"
+			column="NAME"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Aspect"
+			column="ASPECT"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="Aspectsum"
+			column="ASPECTSUM"
+			type="java.lang.Double"
+			not-null="false"
+			length="22"
+		/>
+		<property
+			name="Operateobjectfrom"
+			column="OPERATEOBJECTFROM"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="Operateobjectto"
+			column="OPERATEOBJECTTO"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="Operatecontent"
+			column="OPERATECONTENT"
+			type="string"
+			not-null="false"
+		/>
+		<property
+			name="Operatepeople"
+			column="OPERATEPEOPLE"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Happentime"
+			column="HAPPENTIME"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Recordtime"
+			column="RECORDTIME"
+			type="timestamp"
+			not-null="false"
+			length="19"
+		/>
+		<property
+			name="Updatetime"
+			column="UPDATETIME"
+			type="timestamp"
+			not-null="false"
+			length="19"
+		/>
+		<property
+			name="Opinion"
+			column="OPINION"
+			type="string"
+			not-null="false"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

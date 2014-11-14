@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="page" extends="basePackage">
+		<action name="defrayPageAction" class="defrayPageAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="freemarker">/ftl/view/exchange/defray.ftl</result>
+		</action>
+		<action name="laboragePageAction" class="laboragePageAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="freemarker">/ftl/view/exchange/laborage.ftl</result>
+		</action>
+		<action name="transferPageAction" class="transferPageAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="freemarker">/ftl/view/exchange/transfer.ftl</result>
+		</action>
+	</package>
+
+</struts>

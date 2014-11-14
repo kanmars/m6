@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="cn.kanmars.dao">
+	<class
+		name="Operateobject"
+		table="operateobject"
+	>
+		<composite-id name="Id" class="OperateobjectPK">
+			<key-property
+				name="Id"
+				column="ID"
+				type="string"
+			/>
+			<key-property
+				name="Userid"
+				column="USERID"
+				type="string"
+			/>
+		</composite-id>
+
+		<property
+			name="Name"
+			column="NAME"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Owner"
+			column="OWNER"
+			type="string"
+			not-null="false"
+			length="5"
+		/>
+		<property
+			name="Balance"
+			column="BALANCE"
+			type="java.lang.Double"
+			not-null="false"
+			length="22"
+		/>
+		<property
+			name="Updatetime"
+			column="UPDATETIME"
+			type="timestamp"
+			not-null="false"
+			length="19"
+		/>
+		<property
+			name="Createtime"
+			column="CREATETIME"
+			type="timestamp"
+			not-null="false"
+			length="19"
+		/>
+		<property
+			name="Info"
+			column="INFO"
+			type="string"
+			not-null="false"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

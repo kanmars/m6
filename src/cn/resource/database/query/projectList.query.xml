@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="cn.kanmars.dao">
+	<query name="query_projectListShowDAO_By_Userid" cache-mode="get" read-only="true" cacheable="true">
+	<![CDATA[
+		from Project where Userid=:Userid
+	]]>
+	</query>
+	<query name="query_projectListCountDAO_By_Userid" cache-mode="get" read-only="true" cacheable="true">
+	<![CDATA[
+		select count(*) from Project where Userid=:Userid
+	]]>
+	</query>
+	<query name="query_projectListShowDAO_By_Userid_and_Aspect" cache-mode="get" read-only="true" cacheable="true">
+	<![CDATA[
+		from Project where Userid=:Userid and Aspect=:Aspect
+	]]>
+	</query>
+	<query name="query_projectListCountDAO_By_Userid_and_Aspect" cache-mode="get" read-only="true" cacheable="true">
+	<![CDATA[
+		select count(*) from Project where Userid=:Userid and Aspect=:Aspect
+	]]>
+	</query>
+</hibernate-mapping>

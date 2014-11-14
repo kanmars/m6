@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="jfreeChartActionPackage" extends="baseJFreeChartPackage">
+		<action name="jFreeChartPieAction" class="jFreeChartAction" method="pie">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="chart">
+				<param name="width">400</param>
+				<param name="height">300</param>
+			</result>
+		</action>
+		<action name="jFreeChartAxisAction" class="jFreeChartAction" method="axis">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="chart">
+				<param name="width">1024</param>
+				<param name="height">300</param>
+			</result>
+		</action>
+		<action name="jFreeChartAxisMonthAction" class="jFreeChartAction" method="axisByMonth">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="success" type="chart">
+				<param name="width">1024</param>
+				<param name="height">300</param>
+			</result>
+		</action>
+	</package>
+</struts>

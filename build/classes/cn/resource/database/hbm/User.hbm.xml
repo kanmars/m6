@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="cn.kanmars.dao">
+	<class
+		name="User"
+		table="user"
+	>
+		<id
+			name="Id"
+			type="string"
+			column="ID"
+		>
+			<generator class="assigned"/>
+		</id>
+
+		<property
+			name="Account"
+			column="ACCOUNT"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Name"
+			column="NAME"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Password"
+			column="PASSWORD"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Sex"
+			column="SEX"
+			type="string"
+			not-null="false"
+			length="6"
+		/>
+		<property
+			name="Email"
+			column="EMAIL"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="Birthday"
+			column="BIRTHDAY"
+			type="date"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="Idcard"
+			column="IDCARD"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+
+
+	</class>	
+</hibernate-mapping>
